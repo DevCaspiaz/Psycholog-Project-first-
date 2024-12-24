@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+header {
+  height: 100vh;
+}
+header .container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  position: relative;
+  background-color: #d8dce285;
+}
+header .container_image-box {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 20px;
+  width: min(50vw, 450px);
+}
+header .container_image-box img {
+  width: 100%;
+  border-radius: 20px;
+  vertical-align: middle;
+}
+header .container_header-info {
+  display: flex;
+  flex-direction: column;
+  height: max(30vh, 450px);
+  justify-content: center;
+  gap: 20px;
+}
+header .container_header-info .header-info_text p {
+  font-size: 50px;
+  font-weight: 900;
+  color: #071739f1;
+  line-height: 50px;
+}
+header .container_header-info .header-info_phone a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .container_header-info .header-info_phone a img {
+  width: 45px;
+}
+header .container_header-info .header-info_phone a p {
+  text-align: center;
+  color: #071739;
+  width: 220px;
+  font-size: 20px;
+  padding: 10px 15px;
+  background-color: #ffffff8e;
+  border-radius: 10px;
+  scale: 1;
+  transition: 0.3s;
+}
+header .container_header-info .header-info_phone a p:hover {
+  scale: 1.1;
+  background-color: #071739ab;
+  color: #fff;
+}
+header .container_header-info .header-info_my-telegram {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .container_header-info .header-info_my-telegram a {
+  width: 220px;
+  text-align: center;
+  color: #071739;
+  font-size: 20px;
+  padding: 10px 15px;
+  background-color: #ffffff8e;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+header .container_header-info .header-info_my-telegram a:hover {
+  scale: 1.1;
+  background-color: #071739ab;
+  color: #fff;
+}
+header .container_header-info .header-info_my-telegram img {
+  width: 45px;
+}
+header .container .bg-clip {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}

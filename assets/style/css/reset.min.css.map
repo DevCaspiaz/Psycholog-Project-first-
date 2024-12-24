@@ -1,0 +1,1 @@
+{"version":3,"sources":["../input"],"names":[],"mappings":"AAAA,EACI,QAAA,CACA,SAAA,CACA,qBAAA,CACA,oBAAA,CACA,qBAEJ,KACI,YAEJ,KACI","sourcesContent":["*{\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-decoration: none;\n    list-style-type: none;\n}\nhtml{\n    height: 100%;\n}\nbody{\n    height: 100%;\n}"]}
