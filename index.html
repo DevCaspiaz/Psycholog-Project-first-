@@ -7,6 +7,7 @@
     <title>Vika's Page</title>
     <link rel="stylesheet" href="./assets/style/style.css">
     <link rel="icon" type="image/x-icon" href="/assets/image/Icons/title/lotus.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -14,10 +15,10 @@
             <video autoplay loop muted plays-inline class="bg-clip">
                 <source src="./assets/videos/videoplayback.webm">
             </video>
-            <div class="container_image-box">
+            <div class="container_image-box" data-aos="fade-right">
                 <img src="./assets/image/photo_2024-12-24_19-03-52.jpg" alt="Vika">
             </div>
-            <div class="container_header-info" >
+            <div class="container_header-info" data-aos="fade-left">
                 <div class="header-info_text">
                     <p>Психолог</p>
                     <p>Виктория Аслановна Ангелова</p>
@@ -43,7 +44,7 @@
             <a href="#" class="nav-bar_contact">Контакты</a>
         </nav>
         <section class="about-me">
-            <div class="about-me_text">
+            <div class="about-me_text" data-aos="fade-right">
                 <div class="about-me_text-heading">
                     <p>Меня зовут Вика Áнгелова <br> Я психолог, ACT-терапевт, участник Ассоциации специалистов в сфере контекстуально-поведенческой науки (АКПН)</p>
                     
@@ -115,5 +116,9 @@
     </main>
 
     
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
