@@ -1,0 +1,10 @@
+.header-link-text {
+  width: 220px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 15px;
+  color: #01060f;
+  border-radius: 10px;
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

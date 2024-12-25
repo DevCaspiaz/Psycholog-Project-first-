@@ -7,7 +7,6 @@
     <title>Vika's Page</title>
     <link rel="stylesheet" href="./assets/style/style.css">
     <link rel="icon" type="image/x-icon" href="/assets/image/Icons/title/brain.png">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -23,49 +22,46 @@
                     <p>Психолог</p>
                     <p>Виктория Аслановна Ангелова</p>
                 </div>
-                <div class="header-info_phone">
-                    <a href="#">
-                        <img src="./assets/image/Icons/header/telephone-call.png" alt="">
-                        <p>+7 777 77 77</p>
-                    </a>
+                <div class="header-info_phone header-info_links">
+                    <a href="#" class="header-info_phone_icon"><img src="./assets/image/Icons/header/telephone-call.png" alt="phone"></a>
+                    <a href="#" class="header-info_links-text">+7 777 77 77</a>
                 </div>
-                <div class="header-info_my-telegram">
-                    <img src="./assets/image/Icons/header/telegram.png" width="50px" alt="">
-                    <a href="#">Contact with Telegram</a>
+                <div class="header-info_my-telegram header-info_links">
+                    <a href="#" class="header-info_my-telegram_icon"><img src="./assets/image/Icons/header/telegram.png" alt="telegram"></a>                                      
+                    <a href="#" class="header-info_links-text">Contact with Telegram</a>
                 </div>
             </div>
         </div>
     </header>
-    <header>
-        <div class="container">
-            <div class="container_image-box" data-aos="fade-right">
-                <img src="./assets/image/photo_2024-12-24_19-03-52.jpg" alt="Vika">
+    <main>
+        <nav class="nav-bar">
+            <a href="#" class="nav-bar_menu">Меню</a>
+            <a href="#" class="nav-bar_about-me">Обо мне</a>
+            <a href="#" class="nav-bar_services">Консультации</a>
+            <a href="#" class="nav-bar_question">Запросы</a>
+            <a href="#" class="nav-bar_edu">Образование</a>
+            <a href="#" class="nav-bar_contact">Контакты</a>
+        </nav>
+        <section class="about-me">
+            <div class="about-me_text">
+                <div class="about-me_text-heading">
+                    <p>Меня зовут Вика Áнгелова <br> Я психолог, ACT-терапевт, участник Ассоциации специалистов в сфере контекстуально-поведенческой науки (АКПН)</p>
+                    
+                </div>
+                <hr>
+                <div class="about-me_text-info">
+                    <p>Моим основным подходом в работе является <span>ACT/ЭКТ</span> (Терапия принятия и ответственности).
+                        Также я использую инструменты
+                        <span>CBT</span> (Когнитивно-поведенческой терапии) и
+                        <span>CFT</span> (Терапии фокусированной на сострадании)</p>
+                </div>
             </div>
-            <div class="container_header-info" data-aos="fade-left">
-                <div class="header-info_text">
-                    <p>Психолог</p>
-                    <p>Виктория Аслановна Ангелова</p>
-                </div>
-                <div class="header-info_phone">
-                    <a href="#">
-                        <img src="./assets/image/Icons/header/telephone-call.png" alt="">
-                        <p>+7 777 77 77</p>
-                    </a>
-                </div>
-                <div class="header-info_my-telegram">
-                    <img src="./assets/image/Icons/header/telegram.png" width="50px" alt="">
-                    <a href="#">Contact with Telegram</a>
-                </div>
+            <div class="about-me_photo">
+                <img src="./assets/image/about-me.jpg" width="500px" alt="">
             </div>
-        </div>
-    </header>
+        </section>
+    </main>
+
     
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init(
-        {
-            offset: 400,
-            duration: 1000
-        }
-    );</script>
 </body>
 </html>
