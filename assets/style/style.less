@@ -2,174 +2,281 @@
 @import "variables";
 @import "mixin";
 
-body{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+html{
+    overflow: visible;
+    height: 100%;
 }
-header{
-    height: 100vh;
-    .container{
-        .flex-center();
-        gap: 20px;
-        height: 100%;
-        position: relative;
-        &_image-box{
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+body{
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20px;
+    position: relative;
+    overflow: visible;
+}
+
+.header{
+    &_content{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        background-image: linear-gradient(to right,#C8D3D57a, rgba(63, 53, 53, 0.5)), url(../image/header/cover2.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        flex-wrap: wrap;
+        padding: 20px;
+        &_img-box{
+            min-width: 250px;
+            max-width: 350px;
             border-radius: 20px;
-            width: min(50vw, 450px);
-            
+            box-shadow: #6e83873d 0px 54px 55px, #6e83873d 0px -12px 30px, #6e83873d 0px 4px 6px, #6e83873d 0px 12px 13px, #6e83873d 0px -3px 5px;
             img{
-                width: 100%;
                 border-radius: 20px;
+                width: 100%;
                 vertical-align: middle;
             }
+            animation: goRight 1s ease-in-out;
         }
-        &_header-info{
+        &_about-me{
             display: flex;
             flex-direction: column;
-            height: max(30vh, 450px);
-            justify-content: space-evenly;
-            background-color: #ffffff38;
-            backdrop-filter: blur(15px);
-            padding: 0 30px;
-            border-radius: 20px;
-            .header-info_text{
-                p{
-                    font-size: 50px;
-                    font-weight: 900;
-                    color: @heading-color;
-                    line-height: 50px;
-                }
+            gap: 35px;
+            .my-job, .my-name{
+                font-size: min(max(1rem, 3vw), 40px);
+                letter-spacing: 5px;
+                font-weight: 600;
+                color: #FCFAFA;
             }
-            .header-info_links{
-                display: flex;
-                align-items: center;
-                gap: 20px;
-                &>a{
-                    img{
-                        width: 45px;
-                    }
-                }
-                &-text{
-                    .header-link-text();
-                    &:hover{
-                        scale: 1.1;
-                        background-color: @bg-soft;
-                    }
-                }
+            .my-job{
+                animation: goRight 1s ease-in-out;
             }
+            .my-name{
+                animation: goLeft 1s ease-in-out;
+            }
+            .my-telegram{
+                width: max-content;
+                padding: 10px 20px;
+                border-radius: 20px;
+                font-size: 18px;
+                background-color: #6E8387;
+                color: #FCFAFA;
+                font-weight: 600;
+                transition: 0.4s all;
+                &:hover{
+                    background-color: black;
+                    color: #FCFAFA;
+                    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+                }
+                animation: goUp 1s ease-in-out;
+            }
+
+            
         }
-        .bg-clip{
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
+    }
+
+}
+.nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #c8d3d5b0;
+    backdrop-filter: blur(20px);
+    a{
+        padding: 15px 30px;
+        color: #6E8387;
+        font-size: 20px;
+        font-weight: 700;
+        transition: 0.4s all;
+        &:hover{
+            background-color: #6E8387;
+            color: #FCFAFA;
         }
+    }
+    a.nav-bar_home{
+        margin-right: auto;
+    }
+    a.located{
+        background-color: #6E8387;
+        color: #FCFAFA;
     }
 }
 main{
-    padding: 50px 0;
-    width: 90vw;
-    margin: 0 auto;
-    margin-top: 100px;
-    border-radius: 30px;
-    background-color: @bg-soft;
-    position: relative;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    nav.nav-bar{
-        display: none;
-        position: fixed;
-        top: 10px;
-        margin-left: auto;
-        margin-right: -11.5%;
-        padding: 20px 10px;
-
-        flex-direction: column;
-        background-color: @heading-color;
-        width: max-content;
-        gap: 30px;
-        border-radius: 15px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-        a{
-            font-size: 18px;
-            text-align: center;
-            font-weight: 700;
-            color: @text-color;
-        }
-    }
+    padding: 100px 0;
+    background-color: #FCFAFA;
     .about-me{
-        padding: 100px 30px;
+        padding: 50px 0;
         display: flex;
-        align-items: center;
         gap: 50px;
+        justify-content: center;
+        align-items: center;
         &_text{
-            flex-basis: 50%;
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-            &-heading{
-                font-size: 35px;
-                font-weight: 700;
+            width: 60%;
+            p{
                 text-align: center;
-                line-height: 50px;
-                color: @heading-color;
+                margin: 20px 0;
             }
-            &-info{
+            &_heading{
+                font-size: 40px;
+                color: #6E8387;
+                font-weight: 700;
+            }
+            &_content{
                 font-size: 25px;
-                font-weight: 400;
-                text-align: center;
-                color: @heading-color;
-                span{
+                color: #6E8387;
+                a{
+                    color: #6E8387;
                     font-weight: 700;
+                    font-size: 27px;
                 }
             }
+            hr{
+                height: 2px;
+                background-color: #6E8387;
+                border: none;
+                width: 50%;
+                margin: 0 auto;
+            }
         }
-        &_photo{
-            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-            border-radius: 10px;
-            max-width: 500px;
-            min-width: 150px;
+        &_img{
+            width: min(50%, 350px);
             img{
                 width: 100%;
-                border-radius: 10px;
                 vertical-align: middle;
             }
         }
     }
-    .work{
-        padding: 50px 30px;
-        background-color: #a6b1d1;
-        .flex-center();
-        align-items: first baseline;
-        gap: 20px;
-        flex-wrap: wrap;
-        &_card{
-            flex: 1 1 200px;
-            text-align: center;
-            box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
-            height: 350px;
-            border-radius: 20px;
-            transition: 0.5s;
-            cursor: pointer;
-            &:hover{
-                scale: 1.1;
-                box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    .consultation{
+        padding: 50px 0;
+        &_heading{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 20px;
+            
+            @media (max-width: 900px){
+                gap: 35px;
+                flex-wrap: wrap;
             }
-            &-icon{
-                img{
-                    width: 80px;
+            &_text{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .about-consultation-heading{
+                    color: #6E8387;
+                    font-size: 40px;
+                    font-weight: 900;
+                }
+                .about-consultation-text{
+                    color: #6E8387;
+                    width: 80%;
+                    font-size: 25px;
+                    font-weight: 300;
                 }
             }
-            &-heading{
-                font-size: 25px;
-                font-weight: 700;
-                margin: 20px auto;
-                color: @heading-color;
+        }
+        hr{
+            width: 80%;
+            height: 2px;
+            margin: 50px auto;
+            margin-bottom: 50px;
+            background-color: #6E8387;
+            border: none;
+        }
+        &_cards{
+            width: 80%;
+            border-radius: 10px;
+            padding: 30px 0;
+            box-shadow: rgba(148, 70, 70, 0.16) 0px 10px 36px 0px, rgba(121, 41, 41, 0.06) 0px 0px 0px 1px;
+            margin: 100px auto;
+            .flex-center();
+            gap: 50px;
+            &:hover{
+                box-shadow: #6E8387 0px 20px 30px -10px;
+                
             }
-            &-info{
-                color: @heading-color;
-                font-size: 20px;
-                font-weight: 400;
+            .cards_img{
+                img{
+                    width: 150px;
+                }
+            }
+            .cards_content{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                &-heading{
+                    color: #6E8387;
+                    font-size: 30px;
+                    font-weight: 700;
+                }
+                &-text{
+                    color: #6E8387;
+                    font-size: 20px;
+                }
             }
         }
+        &_competencies, &_session{
+            flex-direction: row-reverse;
+            transition: all 1s;
+        }
+    }
+
+}
+
+//! Suallar cards'da transition islemir
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes goRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+
+    }
+}
+@keyframes goLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+
+    }
+}
+@keyframes goUp{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+
     }
 }
